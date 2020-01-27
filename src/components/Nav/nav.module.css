@@ -1,0 +1,23 @@
+.nav a {
+  text-decoration: none;
+  color: grey;
+  font-size: 24px;
+  margin: 0 25px;
+}
+.activeLink {
+  text-decoration: underline !important;
+  color: black !important;
+}
+
+.nav {
+  margin: 0 auto 50px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: coral;
+  border-radius: 0px 0px 25px 25px;
+  -moz-border-radius: 0px 0px 25px 25px;
+  -webkit-border-radius: 0px 0px 25px 25px;
+  border: 0px solid #000000;
+}
