@@ -1,5 +1,6 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import Loading from './Loading/Loading';
 import Nav from './Nav/Nav';
 import './variables.css';
 
@@ -16,7 +17,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <Suspense fallback={<div>Загрузка...</div>}>
+        <Suspense fallback={<Loading />}>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/movies/:movieId" component={Movie} />
