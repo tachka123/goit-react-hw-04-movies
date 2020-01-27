@@ -7,7 +7,7 @@ import Reviews from '../CastAndReviews/Reviews';
 
 const MovieItem = ({
   match: { url, params },
-  result: { poster_path, original_title, overview, id },
+  result: { poster_path, original_title, overview },
 }) => {
   const { movieId } = params;
   return (
