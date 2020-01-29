@@ -9,8 +9,13 @@ class Сast extends Component {
   };
 
   async componentDidMount() {
+    const castId = document.getElementById('cast');
     const { cast } = await getCast(this.props.id);
     this.setState({ cast });
+    castId.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   }
 
   render() {

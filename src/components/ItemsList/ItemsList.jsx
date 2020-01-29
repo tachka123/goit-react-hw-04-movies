@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import T from 'prop-types';
 import { getPopular, getBySearch } from '../../api/api';
 import Item from './Item';
 import Loading from '../Loading/Loading';
 
 class ItemsList extends Component {
+  static propTypes = {
+    item: T.string.isRequired,
+  };
+
   state = {
     itemsList: [],
-    item: '',
   };
 
   async componentDidMount() {
     const { item } = this.props;
     if (item) {
-      this.setState({ item });
       this.update();
     } else {
       const result = await getPopular();

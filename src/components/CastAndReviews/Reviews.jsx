@@ -13,9 +13,14 @@ class Reviews extends Component {
   };
 
   async componentDidMount() {
+    const revId = document.getElementById('reviews');
     const { id } = this.props;
     const { results } = await getReviews(id);
     this.setState({ results });
+    revId.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   }
 
   render() {
