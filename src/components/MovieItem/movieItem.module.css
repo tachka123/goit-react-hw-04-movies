@@ -6,7 +6,8 @@
   flex-direction: column;
 }
 
-.h2 {
+.h2,
+h3 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-bottom: 10px;
 }
@@ -19,4 +20,34 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   margin-bottom: 30px;
+}
+
+.button {
+  margin-right: auto;
+  width: 100px;
+  height: 60px;
+  background-color: coral;
+  border: solid 2px coral;
+  border-radius: 5%;
+  display: block;
+}
+
+.button:hover {
+  scale: 1.2;
+  transition: 1s all;
+}
+
+button {
+  width: 60px;
+  height: 40px;
+  margin-bottom: 5px;
+  background-color: coral;
+  border: solid 2px coral;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 1s all;
+  background-color: rgb(247, 78, 17);
+  border: solid 2px rgb(247, 78, 17);
 }

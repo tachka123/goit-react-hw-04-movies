@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import T from 'prop-types';
 import { getById } from '../api/api';
 import MovieItem from '../components/MovieItem/MovieItem';
+import Loading from '../components/Loading/Loading';
 
 class MovieDetailsPage extends Component {
   static propTypes = {
+    location: T.shape({}).isRequired,
+    history: T.shape({}).isRequired,
     match: T.shape({
       params: T.shape({
         movieId: T.string,
@@ -25,8 +28,17 @@ class MovieDetailsPage extends Component {
 
   render() {
     const { result } = this.state;
-    const { match } = this.props;
-    return <MovieItem match={match} result={result} />;
+    const { match, location, history } = this.props;
+    return Object.keys(result).length ? (
+      <MovieItem
+        match={match}
+        result={result}
+        location={location}
+        history={history}
+      />
+    ) : (
+      <Loading />
+    );
   }
 }
 

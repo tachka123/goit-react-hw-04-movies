@@ -7,9 +7,12 @@
     "gh-pages": "^2.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-image-appear": "^1.2.22",
     "react-loading": "^2.0.3",
+    "react-loading-skeleton": "^2.0.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.16"
   },
   "scripts": {
     "predeploy": "npm run build",

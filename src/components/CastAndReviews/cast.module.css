@@ -1,0 +1,19 @@
+.listOfCast {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item {
+  list-style-type: none;
+  border: 2px solid coral;
+  border-radius: 10%;
+  text-align: center;
+  margin: 5px 31px 5px 31px;
+}
+
+.item img {
+  width: 200px;
+  height: 267px;
+  object-fit: cover;
+}

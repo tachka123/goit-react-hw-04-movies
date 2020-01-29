@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import ReactImageAppear from 'react-image-appear';
 import { getCast } from '../../api/api';
+import Style from './cast.module.css';
 
 class Сast extends Component {
   state = {
@@ -14,22 +16,29 @@ class Сast extends Component {
   render() {
     const { cast } = this.state;
     return (
-      <ul>
+      <ul id="cast" className={Style.listOfCast}>
         {cast.length > 0 ? (
           cast.map(({ character, cast_id, profile_path }) => (
-            <li key={cast_id}>
+            <li className={Style.item} key={cast_id}>
               <br />
-              <img
-                src={`http://image.tmdb.org/t/p/w200/${profile_path}`}
-                alt=""
-              />
+              {profile_path ? (
+                <ReactImageAppear
+                  src={`http://image.tmdb.org/t/p/w200/${profile_path}`}
+                  showLoader={false}
+                />
+              ) : (
+                <ReactImageAppear
+                  src="https://www.barcamania.com/sites/default/files/no_avatar.jpg"
+                  showLoader={false}
+                />
+              )}
               <br />
               {character}
               <br />
             </li>
           ))
         ) : (
-          <span>There no info about casts</span>
+          <span>There are no info about casts</span>
         )}
       </ul>
     );

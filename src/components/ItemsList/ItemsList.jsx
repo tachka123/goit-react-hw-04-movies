@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getPopular, getBySearch } from '../../api/api';
 import Item from './Item';
+import Loading from '../Loading/Loading';
 
 class ItemsList extends Component {
   state = {
@@ -34,9 +35,11 @@ class ItemsList extends Component {
     const { itemsList } = this.state;
     return (
       <ul>
-        {itemsList.map(item => (
-          <Item key={item.id} prop={item} />
-        ))}
+        {itemsList.length ? (
+          itemsList.map(item => <Item key={item.id} prop={item} />)
+        ) : (
+          <Loading />
+        )}
       </ul>
     );
   }
