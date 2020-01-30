@@ -28,7 +28,7 @@ class Сast extends Component {
               <br />
               {profile_path ? (
                 <ReactImageAppear
-                  src={`http://image.tmdb.org/t/p/w200/${profile_path}`}
+                  src={`http://image.tmdb.org/t/p/w200${profile_path}`}
                   showLoader={false}
                 />
               ) : (

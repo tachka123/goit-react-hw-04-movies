@@ -47,10 +47,10 @@ export default class MovieItem extends Component {
           {overview || <Skeleton duration={2} count={4} />}
         </span>
         <div>Additional information</div>
-        <Link to={`${url}/reviews`}>
+        <Link replace to={`${url}/reviews`}>
           <button type="button">Reviews</button>
         </Link>
-        <Link to={`${url}/cast`}>
+        <Link replace to={`${url}/cast`}>
           <button type="button">Cast</button>
         </Link>
         <Switch>
